@@ -6,8 +6,8 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: layer_ground-cracked_COL_512-LPAD(15.000,15.000)(0.000,0.000)(0.000,0.000,0.000),0.000,0.000
-  m_DiffuseTexture: {fileID: 2800000, guid: fef72045d2e0fee4a8859fb9a22df429, type: 3}
+  m_Name: LayerGrass1
+  m_DiffuseTexture: {fileID: 2800000, guid: 73d3433d5ddb941b5be62515bc6f0817, type: 3}
   m_NormalMapTexture: {fileID: 0}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 15, y: 15}
