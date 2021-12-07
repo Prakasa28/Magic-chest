@@ -497,6 +497,7 @@ MonoBehaviour:
   - {fileID: 1948564270}
   - {fileID: 808386743}
   - {fileID: 1670635017}
+  canMove: 0
 --- !u!54 &932506686
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -825,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5534509878434835220, guid: 0b3be7936de311044a9dcea6fb79ff9d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b3be7936de311044a9dcea6fb79ff9d, type: 3}
@@ -886,7 +887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3540287286951797694, guid: 69f4808bca6d4ba4a8d818f919d2fd2f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69f4808bca6d4ba4a8d818f919d2fd2f, type: 3}
@@ -920,17 +921,6 @@ Transform:
   m_Father: {fileID: 709128363}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1675765445 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6701731733259180103, guid: 69ad6a6a140fbba43be60c82e715b9bf, type: 3}
-  m_PrefabInstance: {fileID: 6701731733104386482}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1697054091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6701731734839716500, guid: 69ad6a6a140fbba43be60c82e715b9bf, type: 3}
       propertyPath: m_text
-      value: 1
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6701731734839716500, guid: 69ad6a6a140fbba43be60c82e715b9bf, type: 3}
       propertyPath: m_fontAsset
@@ -1248,6 +1238,10 @@ PrefabInstance:
     - target: {fileID: 6792158918989052617, guid: 69ad6a6a140fbba43be60c82e715b9bf, type: 3}
       propertyPath: startGameDisplay
       value: 
-      objectReference: {fileID: 1675765445}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792158918989052617, guid: 69ad6a6a140fbba43be60c82e715b9bf, type: 3}
+      propertyPath: playerMovementController
+      value: 
+      objectReference: {fileID: 932506685}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69ad6a6a140fbba43be60c82e715b9bf, type: 3}
