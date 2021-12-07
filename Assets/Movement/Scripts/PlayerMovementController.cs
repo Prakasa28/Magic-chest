@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject SerialTest;
+    [SerializeField] private GameObject SerialTest;
     public List<GameObject> laneLocations;
 
     Rigidbody m_Rigidbody;
     float m_Speed;
+    public bool canMove;
 
     private Vector3 startingPosition;
+
     void Start()
     {
         this.startingPosition = this.transform.position;
@@ -20,9 +21,13 @@ public class PlayerMovementController : MonoBehaviour
         m_Speed = 10.0f;
     }
 
+
     void Update()
     {
-     m_Rigidbody.velocity = transform.forward * m_Speed; 
+        if (canMove)
+        {
+            m_Rigidbody.velocity = transform.forward * m_Speed;
+        }
     }
 
     // Update is called once per frame
@@ -33,7 +38,11 @@ public class PlayerMovementController : MonoBehaviour
         {
             return;
         }
-        int index = (int) float.Parse(input);
-        transform.position = new Vector3(laneLocations[index - 1].transform.position.x, transform.position.y, transform.position.z);
+        if (canMove)
+        {
+            int index = (int) float.Parse(input);
+            transform.position = new Vector3(laneLocations[index - 1].transform.position.x, transform.position.y,
+                transform.position.z);
+        }
     }
 }
