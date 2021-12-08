@@ -12,6 +12,7 @@ namespace Menu.Scripts
         private String countDownText = "Start!";
         public TextMeshProUGUI countdownDisplay;
         public PlayerMovementController playerMovementController;
+        
         private void Start()
         {
             StartCoroutine(CountdownToStart());
