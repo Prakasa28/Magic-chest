@@ -16,7 +16,7 @@ public class GenerateLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!creatingSections && spawnTimes < 30)
+        if (!creatingSections && spawnTimes < 10)
         {
             creatingSections = true;
             if (spawnTimes < beginningSectionSpawnTimes)

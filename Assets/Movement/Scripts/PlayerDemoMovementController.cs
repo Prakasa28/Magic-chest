@@ -52,7 +52,7 @@ public class PlayerDemoMovementController : MonoBehaviour
         }
 
 
-        transform.position = new Vector3(laneLocations[currentLocation].transform.position.x, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[currentLocation].transform.position.z);
 
     }
 }
