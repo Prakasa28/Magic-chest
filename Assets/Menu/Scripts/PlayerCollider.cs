@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class PlayerCollider : MonoBehaviour
 {
-    public GameObject player;
-    private GameObject obstacle;
-
-    public void Start()
-    {
-        obstacle = GameObject.FindWithTag("Obstacles");
-    }
+    public int counter;
 
     public void OnCollisionEnter(Collision other)
     {
-        Debug.Log("collided" + other);
+        if (other.gameObject.CompareTag("Obstacles"))
+        {
+            counter++;
+            if (counter == 3)
+            {
+            }
+        }
     }
 }
