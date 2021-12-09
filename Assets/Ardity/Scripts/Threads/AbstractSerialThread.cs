@@ -246,18 +246,21 @@ public abstract class AbstractSerialThread
             // If a line was read, and we have not filled our queue, enqueue
             // this line so it eventually reaches the Message Listener.
             // Otherwise, discard the line.
-            object inputMessage = ReadFromWire(serialPort);
-            if (inputMessage != null)
-            {
-                if (inputQueue.Count < maxUnreadMessages)
-                {
-                    inputQueue.Enqueue(inputMessage);
-                }
-                else
-                {
-                    Debug.LogWarning("Queue is full. Dropping message: " + inputMessage);
-                }
-            }
+
+            //sending stuff goes waaaaay faster if it doesn't read every time, but now it can't read at all.....
+
+            //object inputMessage = ReadFromWire(serialPort);
+            //if (inputMessage != null)
+            //{
+            //    if (inputQueue.Count < maxUnreadMessages)
+            //    {
+            //        inputQueue.Enqueue(inputMessage);
+            //    }
+            //    else
+            //    {
+            //        Debug.LogWarning("Queue is full. Dropping message: " + inputMessage);
+            //    }
+            //}
         }
         catch (TimeoutException)
         {
