@@ -10,7 +10,7 @@ public class PlayerDemoMovementController : MonoBehaviour
     Rigidbody m_Rigidbody;
     Animator animator;
     public float m_Speed = 10f;
-    private bool canMove = true;
+    public bool canMove = true;
 
     private Vector3 startingPosition;
 

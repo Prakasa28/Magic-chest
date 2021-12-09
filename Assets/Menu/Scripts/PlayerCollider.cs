@@ -9,11 +9,10 @@ namespace Menu.Scripts
     {
         private int damage = -1;
         public GameObject[] hearts;
-        public bool isDead;
+        private bool isDead;
         private String lostGameText = "You lost!";
         public TextMeshProUGUI lostGameDisplay;
         private float countdownTime = 5;
-        public PlayerMovementController playerMovementController;
 
 
         public void OnCollisionEnter(Collision other)
@@ -23,6 +22,7 @@ namespace Menu.Scripts
                 damage++;
                 TakeDamage(damage);
             }
+
         }
 
 
@@ -46,7 +46,7 @@ namespace Menu.Scripts
             if (isDead)
             {
                 countdownTime -= Time.deltaTime;
-                playerMovementController.canMove = false;
+                GetComponent<PlayerDemoMovementController>().canMove = false;
                 lostGameDisplay.text = lostGameText;
                 Debug.Log(countdownTime);
                 if (countdownTime < 0)

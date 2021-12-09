@@ -11,10 +11,11 @@ namespace Menu.Scripts
         private int countdownTime = 5;
         private String countDownText = "Start!";
         public TextMeshProUGUI countdownDisplay;
-        public PlayerMovementController playerMovementController;
+        public PlayerDemoMovementController playerDemoMovementController;
         
         private void Start()
         {
+            playerDemoMovementController.canMove = false;
             StartCoroutine(CountdownToStart());
         }
 
@@ -25,12 +26,12 @@ namespace Menu.Scripts
                 countdownDisplay.text = countdownTime.ToString();
                 yield return new WaitForSeconds(1f);
                 countdownTime--;
-                playerMovementController.canMove = false;
             }
             countdownDisplay.text = countDownText;
+            
             yield return new WaitForSeconds(1f);
             countdownDisplay.gameObject.SetActive(false);
-            playerMovementController.canMove = true;
+            playerDemoMovementController.canMove = true;
         }
         
     }
