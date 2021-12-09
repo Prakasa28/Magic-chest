@@ -13,15 +13,16 @@ namespace Menu.Scripts
         private String lostGameText = "You lost!";
         public TextMeshProUGUI lostGameDisplay;
         private float countdownTime = 5;
+        
 
-
-        public void OnTriggerEnter(Collider other)
+        public void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.CompareTag("Obstacles"))
             {
                 damage++;
                 TakeDamage(damage);
             }
+
         }
 
 
