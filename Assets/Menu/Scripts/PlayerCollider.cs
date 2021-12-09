@@ -15,14 +15,13 @@ namespace Menu.Scripts
         private float countdownTime = 5;
 
 
-        public void OnCollisionEnter(Collision other)
+        public void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Obstacles"))
             {
                 damage++;
                 TakeDamage(damage);
             }
-
         }
 
 

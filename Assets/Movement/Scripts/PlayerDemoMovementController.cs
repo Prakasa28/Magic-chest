@@ -32,13 +32,13 @@ public class PlayerDemoMovementController : MonoBehaviour
         if (!canMove)
         {
             //set animation
-            animator.SetBool(runningHash, false);
+            // animator.SetBool(runningHash, false);
 
             m_Rigidbody.velocity = transform.forward * 0;
             return;
         }
 
-        animator.SetBool(runningHash, true);
+        // animator.SetBool(runningHash, true);
         m_Rigidbody.velocity = transform.forward * m_Speed;
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && currentLocation > 0)
