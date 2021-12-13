@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class Character_Controller : MonoBehaviour
 {
     // Start is called before the first frame update
 
     [SerializeField]
-    private GameObject SerialTest;
+    private GameObject SensorController;
     [SerializeField]
     private GameObject pos1;
     [SerializeField]
@@ -26,7 +26,7 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        string input = SerialTest.GetComponent<SerialTest>().message;
+        string input = SensorController.GetComponent<SensorController>().message;
         if (input == null)
         {
             return;
