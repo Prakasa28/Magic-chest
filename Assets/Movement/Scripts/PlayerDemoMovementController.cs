@@ -10,7 +10,7 @@ public class PlayerDemoMovementController : MonoBehaviour
     Rigidbody m_Rigidbody;
     Animator animator;
     public float m_Speed = 10f;
-    private bool canMove = true;
+    public bool canMove = true;
 
     private Vector3 startingPosition;
 
@@ -32,7 +32,7 @@ public class PlayerDemoMovementController : MonoBehaviour
         if (!canMove)
         {
             //set animation
-            animator.SetBool(runningHash, false);
+             animator.SetBool(runningHash, false);
 
             m_Rigidbody.velocity = transform.forward * 0;
             return;
@@ -52,7 +52,7 @@ public class PlayerDemoMovementController : MonoBehaviour
         }
 
 
-        transform.position = new Vector3(laneLocations[currentLocation].transform.position.x, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[currentLocation].transform.position.z);
 
     }
 }

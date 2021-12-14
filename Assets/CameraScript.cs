@@ -11,7 +11,7 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
         //Here i assumed that you want to change the X 
-        Vector3 newCamPosition = new Vector3(transform.position.x, transform.position.y, target.position.z - 26);
+        Vector3 newCamPosition = new Vector3(target.position.x - 26, transform.position.y, transform.position.z);
         gameObject.transform.position = newCamPosition;
     }
   }
