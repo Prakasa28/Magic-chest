@@ -27,7 +27,7 @@ public class Character_Controller : MonoBehaviour
     void FixedUpdate()
     {
         string input = SensorController.GetComponent<SensorController>().message;
-        if (input == null)
+        if (input == null || input == "")
         {
             return;
         }
