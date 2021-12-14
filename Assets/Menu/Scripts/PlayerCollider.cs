@@ -10,19 +10,25 @@ namespace Menu.Scripts
         private int damage = -1;
         public GameObject[] hearts;
         private bool isDead;
+        private bool isHit;
         private String lostGameText = "You lost!";
         public TextMeshProUGUI lostGameDisplay;
         private float countdownTime = 5;
-        
 
-        public void OnCollisionEnter(Collision other)
+        public void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Obstacles"))
+            if (other.gameObject.CompareTag("Obstacles") && !isHit)
             {
+                Debug.Log("Collided with: " + other);
+                isHit = true;
                 damage++;
                 TakeDamage(damage);
             }
+        }
 
+        private void OnTriggerExit(Collider other)
+        {
+            isHit = false;
         }
 
 
