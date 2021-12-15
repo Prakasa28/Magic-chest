@@ -1,7 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
-
+using EZCameraShake;
 
 namespace Menu.Scripts
 {
@@ -19,8 +19,8 @@ namespace Menu.Scripts
         {
             if (other.gameObject.CompareTag("Obstacles") && !isHit)
             {
-                Debug.Log("Collided with: " + other);
                 isHit = true;
+                CameraShaker.Instance.ShakeOnce(4f, 6f, .1f, .1f);
                 damage++;
                 TakeDamage(damage);
             }
