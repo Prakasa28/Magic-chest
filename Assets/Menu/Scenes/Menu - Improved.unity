@@ -3370,6 +3370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_SpoolWheel_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8477898633741458693, guid: f99470b57671d804fa64e31866b534b7, type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
+      objectReference: {fileID: 0}
     - target: {fileID: 8480804677641610471, guid: f99470b57671d804fa64e31866b534b7, type: 3}
       propertyPath: m_RootOrder
       value: 49
