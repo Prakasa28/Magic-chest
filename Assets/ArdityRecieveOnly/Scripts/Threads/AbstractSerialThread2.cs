@@ -21,7 +21,7 @@ using System.Threading;
  * open this file unless you are introducing incompatibilities for upcoming
  * versions.
  */
-public abstract class AbstractSerialThread
+public abstract class AbstractSerialThread2
 {
     // Parameters passed from SerialController, used for connecting to the
     // serial device as explained in the SerialController documentation.
@@ -62,7 +62,7 @@ public abstract class AbstractSerialThread
     // Constructs the thread object. This object is not a thread actually, but
     // its method 'RunForever' can later be used to create a real Thread.
     // ------------------------------------------------------------------------
-    public AbstractSerialThread(string portName,
+    public AbstractSerialThread2(string portName,
                                 int baudRate,
                                 int delayBeforeReconnecting,
                                 int maxUnreadMessages,
@@ -148,7 +148,7 @@ public abstract class AbstractSerialThread
                     // to the console and notify the listener.
                     Debug.LogWarning("Exception: " + ioe.Message + " StackTrace: " + ioe.StackTrace);
                     if (enqueueStatusMessages)
-                        inputQueue.Enqueue(SerialController.SERIAL_DEVICE_DISCONNECTED);
+                        inputQueue.Enqueue(SerialController2.SERIAL_DEVICE_DISCONNECTED);
 
                     // As I don't know in which stage the SerialPort threw the
                     // exception I call this method that is very safe in
@@ -191,7 +191,7 @@ public abstract class AbstractSerialThread
         serialPort.Open();
 
         if (enqueueStatusMessages)
-            inputQueue.Enqueue(SerialController.SERIAL_DEVICE_CONNECTED);
+            inputQueue.Enqueue(SerialController2.SERIAL_DEVICE_CONNECTED);
     }
 
     // ------------------------------------------------------------------------
@@ -247,20 +247,19 @@ public abstract class AbstractSerialThread
             // this line so it eventually reaches the Message Listener.
             // Otherwise, discard the line.
 
-            //sending stuff goes waaaaay faster if it doesn't read every time, but now it can't read at all.....
 
-            //object inputMessage = ReadFromWire(serialPort);
-            //if (inputMessage != null)
-            //{
-            //    if (inputQueue.Count < maxUnreadMessages)
-            //    {
-            //        inputQueue.Enqueue(inputMessage);
-            //    }
-            //    else
-            //    {
-            //        Debug.LogWarning("Queue is full. Dropping message: " + inputMessage);
-            //    }
-            //}
+            object inputMessage = ReadFromWire(serialPort);
+            if (inputMessage != null)
+            {
+                if (inputQueue.Count < maxUnreadMessages)
+                {
+                    inputQueue.Enqueue(inputMessage);
+                }
+                else
+                {
+                    Debug.LogWarning("Queue is full. Dropping message: " + inputMessage);
+                }
+            }
         }
         catch (TimeoutException)
         {
