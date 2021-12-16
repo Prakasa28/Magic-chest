@@ -33,7 +33,7 @@ public class Character_Controller : MonoBehaviour
         }
         else
         {
-            Debug.Log("position: " + pos);
+            //Debug.Log("position: " + pos);
             switch (pos)
             {
                 case "0":

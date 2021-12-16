@@ -14,7 +14,6 @@ public class LedController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //previousframe.Add("I'm different!");
     }
 
     private void FixedUpdate()
