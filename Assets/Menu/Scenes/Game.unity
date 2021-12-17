@@ -6995,9 +6995,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2531538502689050414, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 4374890460238735786, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
+      propertyPath: m_Color.a
+      value: 0.39215687
       objectReference: {fileID: 0}
     - target: {fileID: 4741816890471537087, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
       propertyPath: m_Pivot.x
@@ -7086,30 +7086,6 @@ PrefabInstance:
     - target: {fileID: 4741816890471537091, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
       propertyPath: m_Name
       value: 'OverlayCanvas '
-      objectReference: {fileID: 0}
-    - target: {fileID: 6453011606647481319, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6453011606647481319, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6453011606647481319, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6453011606647481319, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6453011606647481319, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 180.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6453011606647481319, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -55.8
       objectReference: {fileID: 0}
     - target: {fileID: 6879954554751896613, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
       propertyPath: Player
