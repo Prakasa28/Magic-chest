@@ -7,59 +7,61 @@ namespace Menu.Scripts
 {
     public class PlayerCollider : MonoBehaviour
     {
-        private int damage = -1;
-        public GameObject[] hearts;
-        private bool isDead;
-        private bool isHit;
-        private String lostGameText = "You lost!";
-        public TextMeshProUGUI lostGameDisplay;
-        private float countdownTime = 5;
+        // private int damage = -1;
+        // public GameObject[] hearts;
+        // private bool isDead;
+        // private bool isHit;
+        // private String lostGameText = "You lost!";
+        // public TextMeshProUGUI lostGameDisplay;
+        // private float countdownTime = 5;
 
         public void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Obstacles") && !isHit)
+            if (other.gameObject.CompareTag("Obstacles"))
+                // && !isHit
             {
-                isHit = true;
+                // isHit = true;
                 CameraShaker.Instance.ShakeOnce(4f, 6f, .1f, .1f);
-                damage++;
-                TakeDamage(damage);
+                
+                // damage++;
+                // TakeDamage(damage);
             }
         }
 
-        private void OnTriggerExit(Collider other)
-        {
-            isHit = false;
-        }
+        // private void OnTriggerExit(Collider other)
+        // {
+        //     isHit = false;
+        // }
 
 
         public void Update()
         {
-            DisplayMessage();
+            // DisplayMessage();
         }
 
-        private void TakeDamage(int d)
-        {
-            if (d == 2)
-            {
-                isDead = true;
-            }
-
-            Destroy(hearts[d].gameObject);
-        }
-
-        private void DisplayMessage()
-        {
-            if (isDead)
-            {
-                countdownTime -= Time.deltaTime;
-                GetComponent<PlayerDemoMovementController>().canMove = false;
-                lostGameDisplay.text = lostGameText;
-                Debug.Log(countdownTime);
-                if (countdownTime < 0)
-                {
-                    Application.Quit();
-                }
-            }
-        }
+        // private void TakeDamage(int d)
+        // {
+        //     if (d == 2)
+        //     {
+        //         isDead = true;
+        //     }
+        //
+        //     Destroy(hearts[d].gameObject);
+        // }
+        //
+        // private void DisplayMessage()
+        // {
+        //     if (isDead)
+        //     {
+        //         countdownTime -= Time.deltaTime;
+        //         GetComponent<PlayerDemoMovementController>().canMove = false;
+        //         lostGameDisplay.text = lostGameText;
+        //         Debug.Log(countdownTime);
+        //         if (countdownTime < 0)
+        //         {
+        //             Application.Quit();
+        //         }
+        //     }
+        // }
     }
 }
