@@ -21,8 +21,10 @@ namespace Menu.Scripts
                 // && !isHit
             {
                 // isHit = true;
+                // shake the camera
                 CameraShaker.Instance.ShakeOnce(4f, 6f, .1f, .1f);
-                
+                // slow down the player 
+                GetComponent<PlayerDemoMovementController>().resetMovementSpeed();
                 // damage++;
                 // TakeDamage(damage);
             }

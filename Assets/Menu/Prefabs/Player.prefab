@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5711192683708299378}
   - component: {fileID: 5711192683708299377}
   - component: {fileID: 1709188361918635613}
+  - component: {fileID: 1214145945197686982}
   - component: {fileID: 5134869330149761194}
   - component: {fileID: 5711192683708299376}
   m_Layer: 0
@@ -27,14 +28,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5711192683708299379}
-  m_LocalRotation: {x: 0, y: 0.67963475, z: 0, w: 0.73355067}
+  m_LocalRotation: {x: 0, y: 0.6796333, z: 0, w: 0.733552}
   m_LocalPosition: {x: -6.3181005, y: 2.0539856, z: -10.350174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5714406445900768393}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 85.63, z: 0}
 --- !u!114 &5711192683708299377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,6 +54,9 @@ MonoBehaviour:
   - {fileID: 0}
   m_Speed: 10
   canMove: 1
+  startingSpeed: 10
+  movementIncreaseInterval: 1.5
+  movementIncreaseAmount: 1
 --- !u!114 &1709188361918635613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,11 +69,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79ff966b361497d44bb2e9fb199c9e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  lostGameDisplay: {fileID: 0}
+--- !u!114 &1214145945197686982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5711192683708299379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 556c0a8bd060f134aa0004422eae4546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownDisplay: {fileID: 0}
+  player: {fileID: 5711192683708299379}
 --- !u!136 &5134869330149761194
 CapsuleCollider:
   m_ObjectHideFlags: 0
