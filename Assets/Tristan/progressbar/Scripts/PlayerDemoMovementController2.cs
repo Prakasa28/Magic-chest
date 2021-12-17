@@ -43,11 +43,7 @@ public class PlayerDemoMovementController2 : MonoBehaviour
         m_Rigidbody.velocity = transform.forward * m_Speed;
 
         string pos = SensorController.GetComponent<SensorController>().playerPos;
-        if (pos == null || pos == "")
-        {
-            return;
-        }
-        else
+        if (pos != null && pos != "")
         {
             Debug.Log("position: " + pos);
             switch (pos)
@@ -74,15 +70,16 @@ public class PlayerDemoMovementController2 : MonoBehaviour
             }
         }
 
-        //if (Input.GetKeyDown(KeyCode.LeftArrow) && currentLocation > 0)
-        //{
-        //    currentLocation--;
-        //}
 
-        //if (Input.GetKeyDown(KeyCode.RightArrow) && currentLocation < 2)
-        //{
-        //    currentLocation++;
-        //}
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && currentLocation > 0)
+        {
+            currentLocation--;
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow) && currentLocation < 2)
+        {
+            currentLocation++;
+        }
 
 
         transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[currentLocation].transform.position.z);
