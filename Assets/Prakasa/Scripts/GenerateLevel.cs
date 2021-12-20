@@ -11,12 +11,13 @@ public class GenerateLevel : MonoBehaviour
     private bool creatingSections = false;
     private int secNum;
     int spawnTimes = 0;
+   public int numberOfSections = 10;
 
 
     // Update is called once per frame
     void Update()
     {
-        if (!creatingSections && spawnTimes < 10)
+        if (!creatingSections && spawnTimes < numberOfSections)
         {
             creatingSections = true;
             if (spawnTimes < beginningSectionSpawnTimes)
@@ -35,7 +36,7 @@ public class GenerateLevel : MonoBehaviour
     {
         if (secNum == -1)
         {
-            secNum = Random.Range(0, 3);
+            secNum = Random.Range(1, 4);
         }
         
         Instantiate(section[secNum], new Vector3(xPos, 4, 0), Quaternion.identity);
