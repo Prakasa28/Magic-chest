@@ -3,6 +3,8 @@ using TMPro;
 using UnityEngine;
 using EZCameraShake;
 
+
+
 namespace Menu.Scripts
 {
     public class PlayerCollider : MonoBehaviour
@@ -14,6 +16,7 @@ namespace Menu.Scripts
         // private String lostGameText = "You lost!";
         // public TextMeshProUGUI lostGameDisplay;
         // private float countdownTime = 5;
+        public AudioSource hitFX;
 
         public void OnTriggerEnter(Collider other)
         {
@@ -27,6 +30,7 @@ namespace Menu.Scripts
                 GetComponent<PlayerDemoMovementController>().resetMovementSpeed();
                 // damage++;
                 // TakeDamage(damage);
+                hitFX.Play();
             }
         }
 
