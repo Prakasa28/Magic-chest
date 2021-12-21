@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2667100476791852795}
   - component: {fileID: 2676925064788986789}
   - component: {fileID: 2708770745195019421}
+  - component: {fileID: 5385563291858820243}
+  - component: {fileID: 8871210805161550357}
   m_Layer: 0
   m_Name: SM_Prop_Watermelon_01
   m_TagString: Untagged
@@ -96,3 +98,28 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43085995883101952, guid: 3bd55d1e97fbb5b4587f509ea1a25f7c, type: 2}
+--- !u!114 &5385563291858820243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698127988978944179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142e9cca0db1a364685e9b57ad8c2141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 1
+--- !u!114 &8871210805161550357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2698127988978944179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305627a3867d1c74b86507a57fff17ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
