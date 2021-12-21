@@ -27,7 +27,8 @@ namespace Menu.Scripts
                 // shake the camera
                 CameraShaker.Instance.ShakeOnce(4f, 6f, .1f, .1f);
                 // slow down the player 
-                GetComponent<PlayerDemoMovementController>().resetMovementSpeed();
+                //GetComponent<PlayerDemoMovementController>().resetMovementSpeed();
+                GetComponent<PlayerMovementController>().resetMovementSpeed();
                 // damage++;
                 // TakeDamage(damage);
                 hitFX.Play();

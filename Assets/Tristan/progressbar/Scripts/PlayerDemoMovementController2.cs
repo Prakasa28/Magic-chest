@@ -42,32 +42,30 @@ public class PlayerDemoMovementController2 : MonoBehaviour
         animator.SetBool(runningHash, true);
         m_Rigidbody.velocity = transform.forward * m_Speed;
 
-        string pos = SensorController.GetComponent<SensorController>().playerPos;
-        if (pos != null && pos != "")
+        int pos = SensorController.GetComponent<SensorController>().playerPos;
+
+        Debug.Log("position: " + pos);
+        switch (pos)
         {
-            Debug.Log("position: " + pos);
-            switch (pos)
-            {
-                case "0":
-                    //transform.position = pos3.transform.position;
-                    break;
-                case "1":
-                    currentLocation = 0;
-                    break;
-                case "2":
-                    break;
-                case "3":
-                    currentLocation = 1;
-                    break;
-                case "4":
-                    break;
-                case "5":
-                    currentLocation = 2;
-                    break;
-                default:
-                    //transform.position = pos3.transform.position;
-                    break;
-            }
+            case 0:
+                //transform.position = pos3.transform.position;
+                break;
+            case 1:
+                currentLocation = 0;
+                break;
+            case 2:
+                break;
+            case 3:
+                currentLocation = 1;
+                break;
+            case 4:
+                break;
+            case 5:
+                currentLocation = 2;
+                break;
+            default:
+                //transform.position = pos3.transform.position;
+                break;
         }
 
 

@@ -8,19 +8,20 @@ public class SensorController : MonoBehaviour
 
     private SerialController2 serialController2;
     public string message;
-    string sensor1;
-    string sensor2;
-    string sensor3;
-    public string playerPos;
-    public string playerDis;
+    float sensor1;
+    float sensor2;
+    float sensor3;
+    public int playerPos;
+    public float playerDis;
     [SerializeField] Image S1bar;
     [SerializeField] Image S2bar;
     [SerializeField] Image S3bar;
     [SerializeField] Image Minbar;
     [SerializeField] Image Posbar;
     [SerializeField] Image MessageIndicator;
-    [SerializeField] int maxDistance = 83;
-    [SerializeField] int posAmount = 5;
+    [SerializeField] int maxDistance = 150;
+    [SerializeField] int triggerDistance = 40;
+    int posAmount = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -50,23 +51,35 @@ public class SensorController : MonoBehaviour
         try
         {
             string[] inputlist = message.Split(char.Parse(","));
-            sensor1 = inputlist[0];
-            sensor2 = inputlist[1];
-            sensor3 = inputlist[2];
-            playerPos = inputlist[3];
-            playerDis = inputlist[4];
+            sensor1 = float.Parse(inputlist[0]);
+            sensor2 = float.Parse(inputlist[1]);
+            sensor3 = float.Parse(inputlist[2]);
             StartCoroutine(blinkMessageIndicator());
-            S1bar.fillAmount = float.Parse(sensor1) / maxDistance;
-            S2bar.fillAmount = float.Parse(sensor2) / maxDistance;
-            S3bar.fillAmount = float.Parse(sensor3) / maxDistance;
-            Minbar.fillAmount = float.Parse(playerDis) / maxDistance;
-            Posbar.fillAmount = float.Parse(playerPos) / posAmount;
-            Debug.Log("S1: " + sensor1 + " S2: " + sensor2 + " S3: " + sensor3 + " Pos: " + playerPos + " Dis: " + playerDis);
+            if (sensor1 <= triggerDistance && sensor1 < sensor2 && sensor1 < sensor3) { playerPos = 0; playerDis = sensor1; }
+            else if (sensor2 <= triggerDistance && sensor2 < sensor1 && sensor2 < sensor3) { playerPos = 1; playerDis = sensor2; }
+            else if (sensor3 <= triggerDistance && sensor3 < sensor1 && sensor3 < sensor2) { playerPos = 2; playerDis = sensor3; }
+            S1bar.fillAmount = sensor1 / maxDistance;
+            S2bar.fillAmount = sensor2 / maxDistance;
+            S3bar.fillAmount = sensor3 / maxDistance;
+            Minbar.fillAmount = playerDis / maxDistance;
+            Posbar.fillAmount = (float)playerPos / (float)posAmount;
+            if (sensor1 < triggerDistance) { S1bar.color = Color.yellow; }
+            else { S1bar.color = Color.red; }
+            if (sensor2 < triggerDistance) { S2bar.color = Color.yellow; }
+            else { S2bar.color = Color.red; }
+            if (sensor3 < triggerDistance) { S3bar.color = Color.yellow; }
+            else { S3bar.color = Color.red; }
+
+            Debug.Log("S1: " + sensor1 + " S2: " + sensor2 + " S3: " + sensor3 + " Pos: " + playerPos.ToString() + " Dis: " + playerDis);
 
         }
         catch (System.IndexOutOfRangeException e)
         {
-            Debug.LogError("invalid data lol. Probably haven't received any data yet. Error: " + e);
+            Debug.LogWarning("invalid data. Probably haven't received any data yet. Error: " + e);
+        }
+        catch (System.FormatException e)
+        {
+            Debug.LogWarning("invalid data. didn't receive parsable float. this is normal when the scene just started. Error: " + e);
         }
 
 
@@ -82,6 +95,6 @@ public class SensorController : MonoBehaviour
     {
         MessageIndicator.color = Color.yellow;
         yield return new WaitForSecondsRealtime(0.1f);
-        MessageIndicator.color = Color.white;
+        MessageIndicator.color = Color.black;
     }
 }

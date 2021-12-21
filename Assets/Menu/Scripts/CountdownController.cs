@@ -15,7 +15,8 @@ namespace Menu.Scripts
 
         private void Start()
         {
-            player.GetComponent<PlayerDemoMovementController>().canMove = false;
+            //player.GetComponent<PlayerDemoMovementController>().canMove = false;
+            player.GetComponent<PlayerMovementController>().canMove = false;
             StartCoroutine(CountdownToStart());
         }
 
@@ -32,7 +33,8 @@ namespace Menu.Scripts
 
             yield return new WaitForSeconds(1f);
             countdownDisplay.gameObject.SetActive(false);
-            player.GetComponent<PlayerDemoMovementController>().canMove = true;
+            //player.GetComponent<PlayerDemoMovementController>().canMove = true;
+            player.GetComponent<PlayerMovementController>().canMove = true;
         }
     }
 }
