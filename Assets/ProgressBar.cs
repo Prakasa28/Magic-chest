@@ -64,7 +64,6 @@ public class ProgressBar : MonoBehaviour
             {
                 hat5.SetActive(true);
             }
-            Debug.Log("Final score: " + finalScore);
             //play led animation
             ledController.LedAnimation();
         }
