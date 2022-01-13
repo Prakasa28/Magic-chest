@@ -14,6 +14,8 @@ public class PlayerMovementController : MonoBehaviour
     public bool canMove;
 
     private Vector3 startingPosition;
+    
+    private int currentLocation = 1;
 
     public float startingSpeed = 10f;
 
@@ -25,6 +27,9 @@ public class PlayerMovementController : MonoBehaviour
 
     bool startedIncreaseing = false;
 
+    [SerializeField]
+    bool KeyboardControl = false;
+
     void Start()
     {
         this.startingPosition = this.transform.position;
@@ -35,31 +40,8 @@ public class PlayerMovementController : MonoBehaviour
 
     }
 
-
-    void Update()
-    {
-        //if (!canMove)
-        //{
-        //    //set animation
-        //    animator.SetBool(runningHash, false);
-
-        //    m_Rigidbody.velocity = transform.forward * 0;
-        //    m_Speed = startingSpeed;
-        //    return;
-        //}
-
-        //animator.SetBool(runningHash, true);
-        //m_Rigidbody.velocity = transform.forward * m_Speed;
-
-        //if (!startedIncreaseing)
-        //{
-        //    StartCoroutine(IncreaseMovementSpeed());
-        //}
-
-    }
-
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (!canMove)
         {
@@ -73,29 +55,54 @@ public class PlayerMovementController : MonoBehaviour
         animator.SetBool(runningHash, true);
         m_Rigidbody.velocity = transform.forward * m_Speed;
 
-
-        int input = SensorController.GetComponent<SensorController>().playerPos;
-        if (canMove)
+        if (!KeyboardControl)
         {
-            int index = input;
-            switch (index)
+            int input = SensorController.GetComponent<SensorController>().playerPos;
+            if (canMove)
             {
-                case 0:
-                    transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[0].transform.position.z);
-                    break;
-                case 1:
-                    transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[1].transform.position.z);
-                    break;
-                case 2:
-                    transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[2].transform.position.z);
-                    break;
+                int index = input;
+                switch (index)
+                {
+                    case 0:
+                        transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[0].transform.position.z);
+                        break;
+                    case 1:
+                        transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[1].transform.position.z);
+                        break;
+                    case 2:
+                        transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[2].transform.position.z);
+                        break;
+                }
             }
         }
+        else
+        {
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && currentLocation > 0)
+            {
+                currentLocation--;
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow) && currentLocation < 2)
+            {
+                currentLocation++;
+            }
+
+
+            transform.position = new Vector3(transform.position.x, transform.position.y, laneLocations[currentLocation].transform.position.z);
+        }
+
 
         if (!startedIncreaseing)
         {
             StartCoroutine(IncreaseMovementSpeed());
         }
+
+    }
+
+    void FixedUpdate()
+    {
+
     }
 
     IEnumerator IncreaseMovementSpeed()
