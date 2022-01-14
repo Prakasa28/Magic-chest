@@ -271,6 +271,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4208331535359255111, guid: 76ab2eb7b6f0d24418d8a10e673d25f2, type: 3}
   m_PrefabInstance: {fileID: 25137979}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &35867941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8139013719137422235, guid: 86f4fa5a81448c742b11ecf7ae6e074e, type: 3}
+  m_PrefabInstance: {fileID: 1668448889}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &48370313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2648,14 @@ PrefabInstance:
       propertyPath: hitFX
       value: 
       objectReference: {fileID: 1446845936}
+    - target: {fileID: 0}
+      propertyPath: foodFx
+      value: 
+      objectReference: {fileID: 423537859}
+    - target: {fileID: 0}
+      propertyPath: fivePointsText
+      value: 
+      objectReference: {fileID: 35867941}
     - target: {fileID: 5711192683708299377, guid: e6afce5c32cf14a418b4d255cde1b2ce, type: 3}
       propertyPath: laneLocations.Array.data[0]
       value: 
@@ -8641,6 +8660,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Section2
       objectReference: {fileID: 0}
+    - target: {fileID: 5665892077318743678, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: foodFx
+      value: 
+      objectReference: {fileID: 423537859}
+    - target: {fileID: 5665892077318743678, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: fivePointsText
+      value: 
+      objectReference: {fileID: 35867941}
     - target: {fileID: 6511803718405662575, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
       propertyPath: destroyTime
       value: 15
@@ -8649,6 +8676,14 @@ PrefabInstance:
       propertyPath: destroyTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 8100809577908275650, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: foodFx
+      value: 
+      objectReference: {fileID: 423537859}
+    - target: {fileID: 8100809577908275650, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: fivePointsText
+      value: 
+      objectReference: {fileID: 35867941}
     - target: {fileID: 9143203276999104832, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -24.1
@@ -8669,10 +8704,10 @@ PrefabInstance:
       propertyPath: foodFx
       value: 
       objectReference: {fileID: 423537859}
-    - target: {fileID: 9143203278522141218, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
-      propertyPath: foodFx
-      value: 
-      objectReference: {fileID: 423537859}
+    - target: {fileID: 9143203278522141223, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_TagString
+      value: 5point
+      objectReference: {fileID: 0}
     - target: {fileID: 9143203278778517318, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
       propertyPath: foodFx
       value: 
@@ -8681,10 +8716,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -24.1
       objectReference: {fileID: 0}
-    - target: {fileID: 9143203278782095527, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
-      propertyPath: foodFx
-      value: 
-      objectReference: {fileID: 423537859}
+    - target: {fileID: 9143203278782095528, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_TagString
+      value: 5point
+      objectReference: {fileID: 0}
     - target: {fileID: 9143203278782095529, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.42

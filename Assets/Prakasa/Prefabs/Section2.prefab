@@ -77071,7 +77071,7 @@ GameObject:
   - component: {fileID: 9143203278522141216}
   - component: {fileID: 9143203278522141219}
   - component: {fileID: 9143203278522141221}
-  - component: {fileID: 9143203278522141218}
+  - component: {fileID: 5665892077318743678}
   m_Layer: 0
   m_Name: SM_Prop_Watermelon_01
   m_TagString: Untagged
@@ -77169,7 +77169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 1
---- !u!114 &9143203278522141218
+--- !u!114 &5665892077318743678
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77178,10 +77178,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9143203278522141223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305627a3867d1c74b86507a57fff17ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 081ed1a1c18f85d438fa68bafe68dfc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   foodFx: {fileID: 0}
+  fivePointsText: {fileID: 0}
 --- !u!1 &9143203278540665335
 GameObject:
   m_ObjectHideFlags: 0
@@ -83431,7 +83432,7 @@ GameObject:
   - component: {fileID: 9143203278782095525}
   - component: {fileID: 9143203278782095524}
   - component: {fileID: 9143203278782095526}
-  - component: {fileID: 9143203278782095527}
+  - component: {fileID: 8100809577908275650}
   m_Layer: 0
   m_Name: SM_Prop_Watermelon_01 (1)
   m_TagString: Untagged
@@ -83529,7 +83530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 1
---- !u!114 &9143203278782095527
+--- !u!114 &8100809577908275650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83538,10 +83539,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9143203278782095528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305627a3867d1c74b86507a57fff17ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 081ed1a1c18f85d438fa68bafe68dfc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   foodFx: {fileID: 0}
+  fivePointsText: {fileID: 0}
 --- !u!1 &9143203278806370213
 GameObject:
   m_ObjectHideFlags: 0
