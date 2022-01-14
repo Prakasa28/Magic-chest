@@ -77072,6 +77072,7 @@ GameObject:
   - component: {fileID: 9143203278522141219}
   - component: {fileID: 9143203278522141221}
   - component: {fileID: 5665892077318743678}
+  - component: {fileID: 4734458365799003450}
   m_Layer: 0
   m_Name: SM_Prop_Watermelon_01
   m_TagString: Untagged
@@ -77183,6 +77184,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodFx: {fileID: 0}
   fivePointsText: {fileID: 0}
+--- !u!54 &4734458365799003450
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9143203278522141223}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &9143203278540665335
 GameObject:
   m_ObjectHideFlags: 0
@@ -83433,6 +83450,7 @@ GameObject:
   - component: {fileID: 9143203278782095524}
   - component: {fileID: 9143203278782095526}
   - component: {fileID: 8100809577908275650}
+  - component: {fileID: 2797294012296564612}
   m_Layer: 0
   m_Name: SM_Prop_Watermelon_01 (1)
   m_TagString: Untagged
@@ -83544,6 +83562,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodFx: {fileID: 0}
   fivePointsText: {fileID: 0}
+--- !u!54 &2797294012296564612
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9143203278782095528}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &9143203278806370213
 GameObject:
   m_ObjectHideFlags: 0

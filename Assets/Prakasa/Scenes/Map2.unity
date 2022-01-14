@@ -2648,14 +2648,10 @@ PrefabInstance:
       propertyPath: hitFX
       value: 
       objectReference: {fileID: 1446845936}
-    - target: {fileID: 0}
-      propertyPath: foodFx
-      value: 
-      objectReference: {fileID: 423537859}
-    - target: {fileID: 0}
-      propertyPath: fivePointsText
-      value: 
-      objectReference: {fileID: 35867941}
+    - target: {fileID: 5134869330149761194, guid: e6afce5c32cf14a418b4d255cde1b2ce, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5711192683708299377, guid: e6afce5c32cf14a418b4d255cde1b2ce, type: 3}
       propertyPath: laneLocations.Array.data[0]
       value: 
@@ -8612,6 +8608,18 @@ PrefabInstance:
       propertyPath: destroyTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 2797294012296564612, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734458365799003450, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4734458365799003450, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5250211920388994074, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -8704,6 +8712,18 @@ PrefabInstance:
       propertyPath: foodFx
       value: 
       objectReference: {fileID: 423537859}
+    - target: {fileID: 9143203278522141216, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143203278522141219, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143203278522141219, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9143203278522141223, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
       propertyPath: m_TagString
       value: 5point
@@ -8715,6 +8735,10 @@ PrefabInstance:
     - target: {fileID: 9143203278778517321, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
       propertyPath: m_LocalPosition.z
       value: -24.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143203278782095524, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9143203278782095528, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
       propertyPath: m_TagString
@@ -8728,5 +8752,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -23.95
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2797294012296564612, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
+    - {fileID: 4734458365799003450, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 96af951e57dc5704f8b601706bfeab0f, type: 3}
