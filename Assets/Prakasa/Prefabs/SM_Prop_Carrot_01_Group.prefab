@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4748076421171849111}
   - component: {fileID: 4707759757670214219}
   - component: {fileID: 5294587723871140751}
-  - component: {fileID: 7637682714673874161}
+  - component: {fileID: 6058101764715862951}
   m_Layer: 0
   m_Name: SM_Prop_Carrot_01_Group
   m_TagString: Untagged
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 1
---- !u!114 &7637682714673874161
+--- !u!114 &6058101764715862951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4734697802322554547}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305627a3867d1c74b86507a57fff17ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dbf4a4c42a0f2246affe5a7c0b18517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodFx: {fileID: 0}
